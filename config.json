@@ -1,1 +1,4 @@
-
+{
+    "BOT_TOKEN": "<YOUR_BOT_TOKEN>",
+    "PREFIX": "伊神雅乃"
+}
