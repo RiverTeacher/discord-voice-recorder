@@ -3,6 +3,7 @@ const client = new Discord.Client(
     {intents: ["GUILD_MESSAGES", "GUILD_VOICE_STATES", "GUILDS"]}
 );
 
+require('dotenv').config();
 const config = require('./config.json');
 const commands = require(`./bin/commands`);
 
@@ -22,7 +23,7 @@ client.on('message', msg => {
     }
 });
 
-client.login(config.BOT_TOKEN);
+client.login(process.env.TOKEN);
 
 client.on('ready', () => {
     console.log(`\nONLINE\n`);
